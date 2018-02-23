@@ -62,6 +62,7 @@ namespace Zodiaco.Models
 
                     return Caminhar(objetivo, map, caminho);
                 }
+                objetivoMapa = new Mapa().BuscarNoMapa(objetivoAtual, map);
 
                 // busca a proxima casa (objetivo), a posição da casa 
                 //objetivoMapa = new Mapa().BuscarNoMapa(objetivoAtual, map);
