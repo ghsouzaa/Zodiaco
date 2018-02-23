@@ -1,0 +1,311 @@
+﻿@model Zodiaco.Models.ViewModel.IndexViewModel
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #eef3f9;
+        }
+
+        #containerFormulario {
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.40);
+            border-radius: .3rem;
+            width: 900px;
+        }
+
+        table {
+            border: 0px;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        td {
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+        }
+
+        .percorrido {
+            filter: brightness(50%);
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="containerFormulario" class="container">
+        <div id="divConfiguracoesCavaleiros">
+            <h2>Configurações dos Cavaleiros de Bronze</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanSeya">Seya:</span>
+                        </div>
+                        <input id="Seya" name="Seya" type="text" class="form-control" aria-label="Username" aria-describedby="spanSeya" value="1.5">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanShiryu">Shiryu:</span>
+                        </div>
+                        <input id="Shiryu" name="Shiryu" type="text" class="form-control" aria-label="Username" aria-describedby="spanShiryu" value="1.4">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanHyoga">Hyoga:</span>
+                        </div>
+                        <input id="Hyoga" name="Hyoga" type="text" class="form-control" aria-label="Username" aria-describedby="spanHyoga" value="1.3">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanShun">Shun:</span>
+                        </div>
+                        <input id="Shun" name="Shun" type="text" class="form-control" aria-label="Username" aria-describedby="spanShun" value="1.2">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanIkki">Ikki:</span>
+                        </div>
+                        <input id="Ikki" name="Ikki" type="text" class="form-control" aria-label="Username" aria-describedby="spanIkki" value="1.1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="divConfiguracaoCasas">
+            <h2>Configuração das casas</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa1">1º - Casa de Áries:</span>
+                        </div>
+                        <input id="casa1" name="casa1" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa1" value="50">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa2">2º - Casa de Touro:</span>
+                        </div>
+                        <input id="casa2" name="casa2" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa2" value="55">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa3">3º - Casa de Gêmeos:</span>
+                        </div>
+                        <input id="casa3" name="casa3" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa3" value="60">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa4">4º - Casa de Câncer:</span>
+                        </div>
+                        <input id="casa4" name="casa4" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa4" value="70">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa5">5º - Casa de Leão:</span>
+                        </div>
+                        <input id="casa5" name="casa5" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa5" value="75">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa6">6º - Casa de Virgem:</span>
+                        </div>
+                        <input id="casa6" name="casa6" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa6" value="80">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa7">7º - Casa de Libra:</span>
+                        </div>
+                        <input id="casa7" name="casa7" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa7" value="85">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa8">8º - Casa de Escorpião:</span>
+                        </div>
+                        <input id="casa8" name="casa8" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa8" value="90">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa9">9º - Casa de Sagitário:</span>
+                        </div>
+                        <input id="casa9" name="casa9" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa9" value="95">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa10">10º - Casa de Capricórnio:</span>
+                        </div>
+                        <input id="casa10" name="casa10" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa10" value="100">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa11">11º - Casa de Aquário:</span>
+                        </div>
+                        <input id="casa11" name="casa11" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa11" value="110">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="spanCasa12">12º - Casa de Peixes:</span>
+                        </div>
+                        <input id="casa12" name="casa12" type="text" class="form-control" aria-label="Username" aria-describedby="spanCasa12" value="120">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="divMapa">
+            <button id="btnJson" class="btn btn-success btn-lg btn-block">Começar</button>
+            <h2>Esforço: <span id="esforco"></span></h2>
+            <table>
+                @for (int linha = 0; linha < 42; linha++)
+                {
+                    <tr>
+                        @for (int coluna = 0; coluna < 42; coluna++)
+                        {
+                            <td>
+                                <img id="@string.Format("{0}-{1}", linha, coluna)" src="~/Content/sprite/@Model.Mapa[linha, coluna].Sprite" name="@Model.Mapa[linha,coluna].Sprite" />
+                            </td>
+                        }
+                    </tr>
+                }
+            </table>
+            <table id="lutas" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Casa</th>
+                        <th>Esforço</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <td style="font-weight: bold">Total:</td>
+                        <td>
+                            <span id="totalLutas" style="font-weight: bold">0</span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $("#btnOK").click(function () {
+                $("#divMapa").LoadingOverlay("show");
+            })
+
+            $("#btnJson").click(function () {
+                var c1 = $("#casa1").val();
+                var c2 = $("#casa2").val();
+                var c3 = $("#casa3").val();
+                var c4 = $("#casa4").val();
+                var c5 = $("#casa5").val();
+                var c6 = $("#casa6").val();
+                var c7 = $("#casa7").val();
+                var c8 = $("#casa8").val();
+                var c9 = $("#casa9").val();
+                var c10 = $("#casa10").val();
+                var c11 = $("#casa11").val();
+                var c12 = $("#casa12").val();
+
+                var seya = $("#Seya").val();
+                var shiryu = $("#Shiryu").val();
+                var hyoga = $("#Hyoga").val();
+                var shun = $("#Shun").val();
+                var ikki = $("#Ikki").val();
+
+                $.getJSON('@Url.Content("~/Home/CalcularJson/")', { c1: c1, c2: c2, c3: c3, c4: c4, c5: c5, c6: c6, c7: c7, c8: c8, c9: c9, c10: c10, c11: c11, c12: c12, Seya: seya, Shiryu: shiryu, Hyoga: hyoga, Shun: shun, Ikki: ikki }, function (data) {
+                    DesenharCaminho(data);
+                });
+            })
+        })
+
+        function DesenharCaminho(caminho) {
+            var totalLutas = 0;
+            var casa = 1;
+            var esf = 0;
+            var atual;
+            var anterior;
+            var anteriorChar;
+            var pular = true;
+            var i = 0;
+            while (i < caminho.length) {
+                (function (i) {
+                    setTimeout(function () {
+                        esf = esf + caminho[i].esforco;
+                        atual = caminho[i].idMatriz;
+
+                        if (pular)
+                            $("#" + atual).addClass('percorrido');
+                        else {
+                            $("#" + atual).attr('src', '/Content/sprite/S.jpg');
+                            $("#" + anterior).attr('src', '/Content/sprite/' + anteriorChar);
+                            $("#" + anterior).addClass('percorrido');
+                        }
+                        pular = false;
+
+                        anterior = atual;
+                        anteriorChar = $("#" + anterior).attr('name');
+
+                        $("#esforco").html(Math.round(esf * 100) / 100)
+
+                        if (caminho[i].esforco !== 1 && caminho[i].esforco !== 5 && caminho[i].esforco !== 0) {
+                            totalLutas = totalLutas + (Math.round(caminho[i].esforco * 100) / 100);
+                            $('#lutas tr:last').before('<tr><td>Casa ' + casa + '</td><td>' + Math.round(caminho[i].esforco * 100) / 100 + '</td></tr>');
+                            $("#totalLutas").html((Math.round(totalLutas * 100) / 100));
+                            casa++;
+                        }
+                    }, 10 * i)
+                })(i++)
+            }
+        }
+    </script>
+</body>
+</html>
